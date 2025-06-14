@@ -1,0 +1,84 @@
+/* Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: transparent;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 1000;
+  }
+  .navbar.scrolled {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .logo {
+    font-weight: 600;
+    font-size: 24px;
+    color: #333;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  .nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+  }
+  .nav-menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #007BFF;
+    transition: 0.3s;
+  }
+  .nav-menu li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Sections */
+  .section {
+    min-height: 100vh;
+    padding: 100px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #home { background: linear-gradient(to right, #4facfe, #00f2fe); color: white; }
+  #about { background-color: #f9f9f9; }
+  #services { background-color: #eee; }
+  #contact { background-color: #ddd; }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-menu {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
