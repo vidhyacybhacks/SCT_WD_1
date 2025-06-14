@@ -1,7 +1,7 @@
-// Scroll effect for navbar background
+// Change navbar style when scrolled
 window.addEventListener("scroll", function () {
     const navbar = document.getElementById("navbar");
-    if (window.scrollY > 60) {
+    if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
